@@ -9,7 +9,7 @@ interface Berita {
   judul: string;
   tanggal: string;
   isi: string;
-  gambar_url: string | null;
+  gambar_url: string | Blob | null;
 }
 
 export default function Home() {
@@ -99,7 +99,7 @@ export default function Home() {
         {berita.length > 0 && (
           <div className="relative rounded-lg overflow-hidden shadow-lg">
             <img
-              src={berita[currentSlide].gambar_url}
+              src={berita[currentSlide].gambar_url || ''}
               alt={berita[currentSlide].judul}
               className="w-full h-96 object-cover"
             />
@@ -140,7 +140,7 @@ export default function Home() {
               className="border rounded-lg shadow-lg bg-white overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <img
-                src={item.gambar_url}
+                src={item.gambar_url || ''}
                 alt={item.judul}
                 className="w-full h-48 object-cover"
               />
@@ -170,7 +170,7 @@ export default function Home() {
             </h2>
             <p className="text-sm text-gray-600 mb-4">{selected.tanggal}</p>
             <img
-              src={selected.gambar_url}
+              src={selected.gambar_url || ''}
               alt={selected.judul}
               className="w-full h-64 object-cover rounded mb-4"
             />

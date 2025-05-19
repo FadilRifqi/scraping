@@ -1,4 +1,4 @@
-'use client'; // Menandakan ini adalah Client Component
+'use client';
 
 import { SessionProvider } from 'next-auth/react';
 
