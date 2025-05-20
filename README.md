@@ -85,7 +85,7 @@ NEXTAUTH_SECRET=your-random-secret
   Tambahkan "[http://localhost:3000/api/auth/callback/google](http://localhost:3000/api/auth/callback/google)" sebagai "Authorized redirect URIs"
   Salin Client ID dan Client Secret ke .
 
-  3. Jalankan server development Next.js:
+3. Jalankan server development Next.js:
 
 ```bash
 cd frontend
