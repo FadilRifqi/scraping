@@ -15,7 +15,7 @@ SUMBER_BERITA = [
         "selectors": {
             "listing": {
                 "item": "div.card__post",
-                "judul": "h3",
+                "judul": "h2",
                 "link": "a"
             },
             "detail": {
@@ -205,7 +205,6 @@ def scrape_semua(max_berita = 3):
     return hasil
 
 if __name__ == "__main__":
-    # Parse command-line arguments
     max_berita = 3  # Default value
     if len(sys.argv) > 1:
         try:
